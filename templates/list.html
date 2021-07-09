@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <br><br><br>
+        <a href="/"><button type="button" class="btn btn-info btn-lg" style="float: left">Home</button></a>
+    <h2 class="text-center">STUDENT LIST</h2>
+
+    <table class="table">
+        <thead>
+            <td class="text-center">Roll No</td>
+            <td class="text-center">Name</td>
+            <td class="text-center">Father Name</td>
+            <td class="text-center">Phone</td>
+            <td class="text-center">Cnic</td>
+            <td class="text-center">Program</td>
+            <td class="text-center">Session</td>
+            <td class="text-center">Fess Status</td>
+        </thead>
+
+        {% for row in rows %}
+
+        <tr>
+            <td class="text-center">{{row['roll_no']}}</td>
+            <td class="text-center">{{row['name']}}</td>
+            <td class="text-center">{{row['fname']}}</td>
+            <td class="text-center">{{row['phone']}}</td>
+            <td class="text-center">{{row['cinic']}}</td>
+            <td class="text-center">{{row['program']}}</td>
+            <td class="text-center">{{row['session']}}</td>
+            <td class="text-center">{{row['fees']}}</td>
+        </tr>
+
+        {% endfor %}
+    </table>
+
+
+    </div>
+</body>
+</html>
